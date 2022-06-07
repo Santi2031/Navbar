@@ -1,16 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+   
 }
 
 .container {
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(5, 10, 5, 0.80), rgba(90, 40, 90, 0.80)), url(./programacion.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+    height: 100%;
+    background-color: black;
+   }
 
 .navbar {
     width: 80%;
@@ -22,6 +20,7 @@
 }
 .logo {
     width: 70px;
+    border-radius: 10px;
 }
 
 .navbar ul li {
@@ -48,7 +47,7 @@
     content: "";
     height: 3px;
     width: 0%;
-    background: purple;
+    background: white;
     position: absolute;
     left: 0;
     bottom: -12px;
@@ -58,3 +57,126 @@
 .navbar ul li:hover::before {
     width:100%;
 }
+
+.izquierda {
+    background:white;
+    height: 100vh;
+    width: 50%;
+    color: black;
+    font-family: 'Titillium Web', sans-serif;
+}
+.derecha {
+    background: url(programacion.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+}
+
+#pantalla-dividida {
+    display: flex;
+}
+ 
+h1 {
+    font-size: 60px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 80px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 30px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+
+}
+
+p {
+    font-size: 19px;
+    line-height: 30px;
+    width: 50%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+
+}
+
+
+
+button {
+    margin: 10px;
+    position: relative;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+    transition: .5s;
+    overflow: hidden;
+    margin-left: 250px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+button:hover {
+    color:black;
+}
+
+button span {
+    position: absolute;
+    background:black;
+    transition: .5s;
+}
+
+button span:nth-child(1) {
+    width: 100%;
+    height: 3.5px;
+    top: 0;
+    left: -100%;
+}
+
+button span:nth-child(2) {
+    width: 100%;
+    height: 3.5px;
+    bottom: 0;
+    right: -100%;
+}
+
+button span:nth-child(3) {
+    width: 3.5px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+}
+
+button span:nth-child(4) {
+    width: 3.5px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+}
+
+button:hover span:nth-child(1) {
+    left: 0;
+}
+
+button:hover span:nth-child(2) {
+    right: 0;
+}
+
+button:hover span:nth-child(3) {
+    bottom: 0;
+}
+
+button:hover span:nth-child(4) {
+    top: 0;
+}
+
